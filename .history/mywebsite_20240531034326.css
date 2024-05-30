@@ -274,7 +274,7 @@ body > div {
 /* home_content */
 .home_content {
   height: 100%;
-  width: calc(100% - 70px);
+  width: calc(100% - 25px);
   left:70px;
   top: 0;
   bottom: 0;
