@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="mywebsite.css">
+  <script src="https://kit.fontawesome.com/2dbcf482c2.js" crossorigin="anonymous"></script>
+  <!-- <script src="/sidebar.js"></script> -->
+  <title>ComeBuyTea</title>
+
+</head>
+<body>
+
+  <header></header>
+
+  <main>
+    <!-- sidebar implementation -->
+    <div class="sidebar workspace--flexchild1">
+      <div class="logo_content">
+          <div class="logo">
+              <dive class="logo_name"> ComeBuyTea </dive>
+              <i class="fas fa-bars" id="btn"></i>
+          </div>
+      </div>
+  
+      <ul class="nav_list">
+          <li>
+              <a href="#" onclick="showContent('section_home')">
+                  <i class="fas fa-home"></i>
+                  <span class="links_name">ComeBack</span>
+              </a>
+              <span class = "tooltip">ComeBack</span>
+          </li>
+  
+          <li>
+              <a href="#" onclick="showContent('section_tea')">
+                  <i class="fa-solid fa-glass-water"></i>
+                  <span class="links_name">Tea</span>
+              </a>
+              <span class = "tooltip">Tea</span>
+          </li>
+  
+          <li>
+            <a href="#" onclick="showContent('section_contact')">
+                <i class="fa-solid fa-address-card"></i>
+                <span class="links_name">Contact us</span>
+            </a>
+            <span class = "tooltip">Contacts us</span>
+        </li>
+      </ul>
+  
+      <ul class="contact_list">
+        <li>
+          <a href="#">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-brands fa-discord"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-solid fa-share-nodes"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+    
+    <!-- home content implementation -->
+    <!-- <div class="home_content">
+      <div id="section_tea" class="scroll-container">
+          <div class="box">
+            <img src="./images/classic.png">
+            <p class="title">Fruit Teas</p>
+          </div>
+          <div class="box">
+            <img src="./images/classic.png">
+            <p class="title">Tea Latte</p>
+          </div>
+          <div class="box">
+            <img src="./images/classic.png">
+            <p class="title">Milk Teas</p>
+          </div>
+          <div class="box">
+            <img src="./images/classic.png">
+            <p class="title">Pure Teas</p>
+          </div>
+          <div class="box">
+            <img src="./images/classic.png">
+            <p class="title">Smoothie</p>
+          </div>
+          <div class="box">
+            <img src="./images/classic.png">
+            <p class="title">Milkshake</p>
+          </div>
+          <div class="box">
+            <img src="./images/classic.png">
+            <p class="title">Milkshake</p>
+          </div>
+          <div class="box">
+            <img src="./images/classic.png">
+            <p class="title">Milkshake</p>
+          </div>
+      </div>
+    </div> -->
+  </main>
+
+  <footer></footer>
+
+
+
+
+  <script>
+    function showContent(sectionId) {
+        // 获取所有内容部分
+        var contentSections = document.querySelectorAll('.home_content > div');
+        
+        // 遍历内容部分，隐藏所有部分并移除 active 类
+        contentSections.forEach(function(section) {
+            section.style.visibility = 'hidden';
+        });
+
+        // 显示选定的内容部分并添加 active 类
+        document.getElementById(sectionId).style.visibility = 'visible';
+    }
+  </script>
+
+  <script>
+    let btn = document.querySelector("#btn");
+    let sidebar = document.querySelector(".sidebar");
+
+    btn.onclick = function() {
+        sidebar.classList.toggle("active");
+    }
+  </script>
+</body>
+</html>
