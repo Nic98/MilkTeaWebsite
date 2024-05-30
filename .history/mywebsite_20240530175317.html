@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="mywebsite.css">
+  <link rel="'stylesheet" href="bootstrap.min.css">
+  <script src="https://kit.fontawesome.com/2dbcf482c2.js" crossorigin="anonymous"></script>
+  <title>ComeBuyTea</title>
+</head>
+<body>
+
+  <header></header>
+
+  <main>
+
+    
+    <!-- sidebar implementation -->
+    <div class="sidebar workspace--flexchild1">
+      <div class="logo_content">
+          <div class="logo">
+              <dive class="logo_name"> ComeBuyTea </dive>
+              <i class="fas fa-bars" id="btn"></i>
+          </div>
+      </div>
+  
+      <ul class="nav_list">
+          <li>
+              <a href="#">
+                  <i class="fas fa-home"></i>
+                  <span class="links_name">ComeBack</span>
+              </a>
+              <span class = "tooltip">ComeBack</span>
+          </li>
+  
+          <li>
+              <a href="#">
+                  <i class="fa-solid fa-glass-water"></i>
+                  <span class="links_name">Tea</span>
+              </a>
+              <span class = "tooltip">Tea</span>
+          </li>
+  
+          <li>
+            <a href="#">
+                <i class="fa-solid fa-address-card"></i>
+                <span class="links_name">Contact us</span>
+            </a>
+            <span class = "tooltip">Contacts us</span>
+        </li>
+      </ul>
+  
+      <ul class="contact_list">
+        <li>
+          <a href="#">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-brands fa-discord"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-solid fa-share-nodes"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+    
+    <!-- home content implementation -->
+    <div class="home_content">
+
+      <div 
+      <div>
+        <img src="./images/background.png" alt="background" class="background
+      </div>
+
+
+    </div>
+
+  </main>
+
+  <footer></footer>
+
+  <script>
+    let btn = document.querySelector("#btn");
+    let sidebar = document.querySelector(".sidebar");
+
+    btn.onclick = function() {
+        sidebar.classList.toggle("active");
+    }
+  </script>
+</body>
+</html>
+
+
+     <!-- <div id="section_tea" class="slidershow">
+        <div class="slides">
+          <input type="radio" name="r" id="r1" checked>
+          <input type="radio" name="r" id="r2">
+          <input type="radio" name="r" id="r3">
+          <div class="slide s1">
+            <img src="./images/classic.png" alt="">
+            <p class="title">Fruit Teas</p>
+          </div>
+          <div class="slide">
+            <img src="./images/avatar1.png" alt="">
+            <p class="title">Tea Latte</p>
+          </div>
+          <div class="slide">
+            <img src="./images/avatar2.png" alt="">
+            <p class="title">Milk Teas</p>
+          </div>
+        </div>
+
+    </div>
+
+    <div class="navigation">
+      <label for="r1" class="bar"></label>
+      <label for="r2" class="bar"></label>
+      <label for="r3" class="bar"></label>
+    </div>
+  </div> -->
