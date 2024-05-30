@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="mywebsite.css">
+  <link rel="'stylesheet" href="bootstrap.min.css">
+  <script src="https://kit.fontawesome.com/2dbcf482c2.js" crossorigin="anonymous"></script>
+  <title>FoxyTea</title>
+</head>
+<body>
+
+  <header></header>
+
+
+    
+  <!-- sidebar implementation -->
+  <div class="sidebar workspace--flexchild1">
+    <div class="logo_content">
+        <div class="logo">
+            <dive class="logo_name"> Foxy Tea </dive>
+            <i class="fas fa-bars" id="btn"></i>
+        </div>
+    </div>
+
+    <ul class="nav_list">
+        <li>
+            <a href="#">
+                <i class="fas fa-home"></i>
+                <span class="links_name">ComeBack</span>
+            </a>
+            <span class = "tooltip">ComeBack</span>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fa-solid fa-glass-water"></i>
+                <span class="links_name">Our Menu</span>
+            </a>
+            <span class = "tooltip">Our Menu</span>
+        </li>
+
+        <li>
+          <a href="#">
+              <i class="fa-solid fa-address-card"></i>
+              <span class="links_name">Get in touch</span>
+          </a>
+          <span class = "tooltip">Get in touch</span>
+      </li>
+    </ul>
+
+    <ul class="contact_list">
+      <li>
+        <a href="#">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fa-brands fa-discord"></i>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fa-solid fa-share-nodes"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+  <!-- home content implementation -->
+  <div class="home_content">
+    <div class="top">
+      <img src="./images/lftimg.jpg" alt="" class="lftimg">
+      <img src="./images/lftimg.png" alt="" class="rgtimg">
+    </div>
+
+    <div class="contact">
+      <div class="contact_text">
+        <p class="title">Get in touch</p>
+        <p class="text">If you have any comments, suggestions or business inquires please fill in the contact form below and we will get back to you shortly.</p>
+      </div>
+
+      <form class="info">
+        <div class="name">
+          <div class="inputbox">
+            <input type="text" name="name" required="required" class="input" placeholder="Name">
+          </div>
+          <div class="inputbox">
+            <input type="text" name="email" required="required" class="input" placeholder="Email">
+          </div>
+        </div>
+        <div class="inputbox">
+          <input type="text" name="email" required="required" class="input subject_input" placeholder="Subject">
+        </div>
+        <div class="inputbox">
+          <textarea name="message" required="required" class="input message_input" placeholder="Message"></textarea>
+        </div>
+        <div class="inputbox">
+          <input type="submit" value="Send">
+        </div>
+      </form>
+      </div>
+  </div>
+
+
+  <footer>
+    <p>© 2024 FoxyTea. All rights reserved.</p>
+  </footer>
+
+  <script>
+    let btn = document.querySelector("#btn");
+    let sidebar = document.querySelector(".sidebar");
+
+    btn.onclick = function() {
+        sidebar.classList.toggle("active");
+    }
+  </script>
+</body>
+</html>
+
+
+     <!-- <div id="section_tea" class="slidershow">
+        <div class="slides">
+          <input type="radio" name="r" id="r1" checked>
+          <input type="radio" name="r" id="r2">
+          <input type="radio" name="r" id="r3">
+          <div class="slide s1">
+            <img src="./images/classic.png" alt="">
+            <p class="title">Fruit Teas</p>
+          </div>
+          <div class="slide">
+            <img src="./images/avatar1.png" alt="">
+            <p class="title">Tea Latte</p>
+          </div>
+          <div class="slide">
+            <img src="./images/avatar2.png" alt="">
+            <p class="title">Milk Teas</p>
+          </div>
+        </div>
+
+    </div>
+
+    <div class="navigation">
+      <label for="r1" class="bar"></label>
+      <label for="r2" class="bar"></label>
+      <label for="r3" class="bar"></label>
+    </div>
+  </div> -->
