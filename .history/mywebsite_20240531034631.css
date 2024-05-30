@@ -21,13 +21,13 @@ body {
   position: relative;
   max-height: 100vh;
   width: 100%;
-  height: 100%;
+  height: auto;
   overflow:auto;
   overflow-x: hidden;
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
-  z-index: 1;
+  z-index: 0;
 }
 
 body > div {
@@ -273,14 +273,13 @@ body > div {
 
 /* home_content */
 .home_content {
-  display: flex;
-  flex-direction: column;
-  height: calc(100% - 70px);
+  height: 100%;
   width: calc(100% - 70px);
   left:70px;
+  top: 0;
+  bottom: 0;
   transition: all 0.5s ease;
   z-index: 1;
-  overflow-x: hidden;
 }
 
 .sidebar.active ~ .home_content {
@@ -315,7 +314,7 @@ body > div {
 /* contact */
 
 .contact {
-  background-color: #F7F7F7;
+  
 }
 
 .contact_text {
@@ -368,7 +367,6 @@ body > div {
 footer {
   background-color: var(--bg);
   color: #333;
-  border: 20px;
   padding: 20px 0;
   text-align: center;
   position: fixed;

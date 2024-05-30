@@ -275,12 +275,11 @@ body > div {
 .home_content {
   display: flex;
   flex-direction: column;
-  height: calc(100% - 70px);
+  height: calc(100% - 40px);
   width: calc(100% - 70px);
   left:70px;
   transition: all 0.5s ease;
   z-index: 1;
-  overflow-x: hidden;
 }
 
 .sidebar.active ~ .home_content {
