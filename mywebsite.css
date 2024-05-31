@@ -93,7 +93,6 @@ body > div {
   width: 100%;
   align-items: center;
   transition: all 0.5s ease;
-  
 }
 
 .logo_content .logo i {
@@ -104,6 +103,20 @@ body > div {
 .logo_content .logo .logo_name {
   font-size: 20px;
   font-weight: 400;
+}
+
+.sidebar .logo_name {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: none;
+}
+
+.sidebar.active .logo_name {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: opacity 1s;
 }
 
 .sidebar #btn {
@@ -204,19 +217,10 @@ body > div {
   pointer-events: auto;
 }
 
-.sidebar .logo_name {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.sidebar.active .logo_name {
-  opacity: 1;
-  pointer-events: auto;
-}
-
 /* side bar contact list */
 .contact_list {
   position: absolute;
+  padding-right: 10px;
   bottom: 0;
   padding-inline-start: 0%;
   list-style-type: none;
@@ -227,7 +231,6 @@ body > div {
 .contact_list li i {
   line-height: 29px;
   border-radius: 12px;
-  text-align: center;
 }
 
 .contact_list li a:hover {
@@ -248,6 +251,7 @@ body > div {
   line-height: 0px;
   transition: all 0.4s ease;
   z-index: 1;
+  padding-left: 10px;
 }
 
 .sidebar.active .contact_list {
