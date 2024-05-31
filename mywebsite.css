@@ -279,7 +279,7 @@ body > div {
 .home_content {
   display: flex;
   flex-direction: column;
-  height: calc(100% - 70px);
+  height: 100%;
   width: calc(100% - 70px);
   left:70px;
   transition: all 0.5s ease;
@@ -403,12 +403,13 @@ footer {
   border: 20px;
   padding: 20px 0;
   text-align: center;
-  position: fixed;
+  position: relative;
   bottom: 0;
   width: 100%;
   transition: all 0.5s ease;
   box-shadow: #11101d 0px 0px 2px 0px;
   border-color: #11101d;
+  /* min-height: 100vh; */
 }
 
 .sidebar.active ~ footer {
