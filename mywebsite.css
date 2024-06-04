@@ -393,6 +393,106 @@ body > div {
   border:#11101d 1px;
 }
 
+/* intro */
+.intro {
+  position: relative; /* 让伪元素相对于该元素定位 */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5); /* 添加透明度，使背景颜色变暗 */
+  background-blend-mode: multiply; /* 调整背景与背景颜色的混合模式 */
+  width: 100%;
+  height: 100em;
+}
+
+.intro::before {
+  content: ""; /* 添加伪元素 */
+  position: absolute; /* 绝对定位，覆盖在元素上方 */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url('./images/us.jpg'); /* 背景图片路径 */
+  filter: blur(5px); /* 添加5像素的模糊效果 */
+  background-size: cover; /* 使背景图像覆盖整个容器 */
+  background-position: center; /* 将背景图像置于容器中心 */
+  z-index: -1; /* 将伪元素放置在元素的下方 */
+}
+
+.intro .intro_texts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  z-index: 1; /* 确保内容在上方显示 */
+}
+
+.intro .title {
+  top: 2px;
+  color:#fff;
+  font-family:AmberlySans-Regular;
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.intro .intro_text {
+  font-size: 25px;
+  font-weight: 500;
+  color:#fff;
+  margin: 20px;
+  font-family: AmberlySans-Regular;
+}
+
+.intro .btn {
+  /* text-align: center; */
+  display: flex;
+  position: relative;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 20px;
+  padding: 20px 0px;
+  height: 10px;
+  width: 150px;
+  overflow: hidden;
+  border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  bottom: 10px;
+  font-family: AmberlySans-Regular;
+}
+
+.intro .btn.btn-primary{
+  transition: all 0.2s linear 0s;
+  
+  &:before {
+    content: "\f178";
+    font-family: FontAwesome;
+    font-size: 15px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    height: 100%;
+    width: 40px;
+    transition: all 0.2s linear 0s;
+    text-align: center;
+  }
+  
+  &:hover {
+    text-indent: -20px;
+    
+    &:before {
+      opacity: 1;
+      text-indent: 0px;
+    }
+  }
+}
 
 /* footer */
 footer {

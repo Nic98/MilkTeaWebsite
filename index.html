@@ -4,8 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="mywebsite.css">
+  <link href="https://db.onlinewebfonts.com/c/6665bf2217cc93fb7e7a84e59c1b5bc3?family=AmberlySans-Regular" rel="stylesheet">
   <!-- <link rel="'stylesheet" href="bootstrap.min.css"> -->
   <script src="https://kit.fontawesome.com/2dbcf482c2.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="sweetalert2.all.min.js"></script>
+  <script>
+    function confirm() {
+      Swal.fire({
+        title: 'Thank you!',
+        text: 'Your message has been sent.',
+        icon: 'success',
+        confirmButtonText: 'OK'
+      })
+    }
+  </script>
   <title>FoxyTea</title>
 </head>
 <body>
@@ -77,6 +90,16 @@
       <img src="./images/lftimg.jpg" alt="" class="lftimg">
       <img src="./images/rgtimg.jpg" alt="" class="rgtimg">
     </div>
+
+    <div class="intro">
+      <div class="intro_texts">
+        <p class="title">Foxy Tea Australia</p>
+        <p class="intro_text">We are a small tea shop located in the heart of the city. We offer a wide range of teas, from classic teas to fruit teas and milk teas. We also offer a variety of tea lattes and other tea-based drinks. Our teas are made from the finest ingredients and are brewed to perfection. Come and visit us today and experience the taste of Foxy Tea.</p>
+      </div>
+      <button class="btn btn-primary">Learn more</button>
+    </div>
+
+
 
     <div class="contact">
       <div class="contact_text">
