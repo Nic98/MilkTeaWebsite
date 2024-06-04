@@ -529,7 +529,7 @@ footer {
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
-  height: 324px;
+  height: 330px;
   @media screen and (max-width: 380px) {
     width: 267px;
   }
@@ -578,6 +578,10 @@ footer {
 }
 .slider-button{
   position: relative;
+  .left-button, .right-button{
+    height:24px;
+  }
+
   top: 50%;
   left: calc(50% - 108px);
   z-index: 1;
@@ -585,8 +589,15 @@ footer {
   .left-button{
     margin-right: 150px;
   }
+  transition: all 0.5s ease;
+}
+
+.menu:hover {
+  .slider-button{
+    color:#032444;
+  }
 }
 
 .material-symbols-outlined {
-  background-color: #676767;
+  background-color:var(--lightgray);
 }
