@@ -6,19 +6,9 @@
   <link rel="stylesheet" href="mywebsite.css">
   <link href="https://db.onlinewebfonts.com/c/6665bf2217cc93fb7e7a84e59c1b5bc3?family=AmberlySans-Regular" rel="stylesheet">
   <!-- <link rel="'stylesheet" href="bootstrap.min.css"> -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <script src="https://kit.fontawesome.com/2dbcf482c2.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="sweetalert2.all.min.js"></script>
-  <script>
-    function confirm() {
-      Swal.fire({
-        title: 'Thank you!',
-        text: 'Your message has been sent.',
-        icon: 'success',
-        confirmButtonText: 'OK'
-      })
-    }
-  </script>
   <title>FoxyTea</title>
 </head>
 <body>
@@ -101,8 +91,40 @@
 
     <div class="mkt-menu">
       <div class="menu">
-        <div class="mkt">
-          <img src="./images/mkt1.png">
+        <span class="slider-button">
+          <button class="left-button" onclick="slideLeft()">
+            <span class="material-symbols-outlined">
+              arrow_back_ios
+            </span>
+          </button>
+          <button onclick="slideRight()">
+            <span class="material-symbols-outlined">
+             arrow_forward_ios
+            </span>
+          </button>
+        </span>
+        <div id="slider-container" class="slider-container">
+          <div class="mkt" style="order: 1">
+            <img src="./images/mkt1.png" alt="">
+          </div>
+          <div class="mkt" style="order: 2">
+            <img src="./images/mkt1.png" alt="">
+          </div>
+          <div class="mkt" style="order: 3">
+            <img src="./images/mkt1.png" alt="">
+          </div>
+          <div class="mkt bigger-mkt" style="order: 4">
+            <img src="./images/mkt1.png" alt="">
+          </div>
+          <div class="mkt" style="order: 5">
+            <img src="./images/mkt1.png" alt="">
+          </div>
+          <div class="mkt" style="order: 6">
+            <img src="./images/mkt1.png" alt="">
+          </div>
+          <div class="mkt" style="order: 7">
+            <img src="./images/mkt1.png" alt="">
+          </div>
         </div>
       </div>
     </div>
@@ -140,6 +162,66 @@
 
 
   <script>
+
+    function slideLeft(){
+      let sliderContainer = document.querySelector("#slider-container");
+      sliderContainer.style.transition = '';
+      currentLeft = parseInt(window.getComputedStyle(sliderContainer).left);
+      sliderContainer.style.left = (currentLeft + 260) + 'px';
+      let mkts = document.getElementsByClassName("mkt");
+      for(let mkt of mkts){
+        let currentOrder = parseInt(window.getComputedStyle(mkt).order);
+        currentOrder -= 1;
+
+        if(currentOrder === 4){
+          mkt.classList.add("bigger-mkt");
+        }
+        if(currentOrder === 3){
+          mkt.classList.remove("bigger-mkt");
+        }
+        if(currentOrder < 1) {
+          currentOrder += 7;
+        }
+        mkt.style.order = currentOrder.toString();
+      };
+
+      
+      sliderContainer.style.left = currentLeft + 'px';
+      sliderContainer.style.transition = 'left 1s';
+      
+      
+    }
+
+    function slideRight(){
+      let sliderContainer = document.querySelector("#slider-container");
+      sliderContainer.style.transition = '';
+      currentLeft = parseInt(window.getComputedStyle(sliderContainer).left);
+      sliderContainer.style.left = (currentLeft - 260) + 'px';
+      let mkts = document.getElementsByClassName("mkt");
+      for(let mkt of mkts){
+        let currentOrder = parseInt(window.getComputedStyle(mkt).order);
+        currentOrder += 1;
+
+        if(currentOrder === 4){
+          mkt.classList.add("bigger-mkt");
+        }
+        if(currentOrder === 5){
+          mkt.classList.remove("bigger-mkt");
+        }
+
+        if(currentOrder > 7) {
+          currentOrder = 1;
+        }
+        mkt.style.order = currentOrder.toString();
+      };
+
+      
+      sliderContainer.style.left = currentLeft + 'px';
+      sliderContainer.style.transition = 'left 1s';
+    }
+  </script>
+
+  <script>
     let btn = document.querySelector("#btn");
     let sidebar = document.querySelector(".sidebar");
 
@@ -148,39 +230,5 @@
     }
   </script>
 
-
-
-
-
-
 </body>
 </html>
-
-
-     <!-- <div id="section_tea" class="slidershow">
-        <div class="slides">
-          <input type="radio" name="r" id="r1" checked>
-          <input type="radio" name="r" id="r2">
-          <input type="radio" name="r" id="r3">
-          <div class="slide s1">
-            <img src="./images/classic.png" alt="">
-            <p class="title">Fruit Teas</p>
-          </div>
-          <div class="slide">
-            <img src="./images/avatar1.png" alt="">
-            <p class="title">Tea Latte</p>
-          </div>
-          <div class="slide">
-            <img src="./images/avatar2.png" alt="">
-            <p class="title">Milk Teas</p>
-          </div>
-        </div>
-
-    </div>
-
-    <div class="navigation">
-      <label for="r1" class="bar"></label>
-      <label for="r2" class="bar"></label>
-      <label for="r3" class="bar"></label>
-    </div>
-  </div> -->

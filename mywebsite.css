@@ -81,7 +81,6 @@ body > div {
 
 .sidebar.active{
   width:250px;
-  position: absolute;
   height: 100%;
 }
 
@@ -513,4 +512,81 @@ footer {
 .sidebar.active ~ footer {
   width: calc(100% - 240px);
   left:240px;
+}
+
+
+/* milk tea menu */
+.mkt-menu{
+  background-color: #fef7ee;
+  height: 650px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.mkt-menu .menu{
+  max-width: 1026px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  height: 324px;
+  @media screen and (max-width: 380px) {
+    width: 267px;
+  }
+
+  @media screen and (min-width: 380px) and (max-width: 600px) {
+    width: 380px;
+  }
+
+  @media screen and (min-width: 600px) and (max-width: 1005px) {
+    width: 600px;
+  }
+
+  @media screen and (min-width: 1005px) and (max-width: 1205px) {
+    width: 1026px;
+  }
+}
+.mkt{
+  height: 260px;
+  width: 260px;
+  min-height: 260px;
+  min-width: 260px;
+  transition: min-width 1s, min-height 1s;
+}
+.bigger-mkt{
+  min-height: 300px;
+  min-width: 300px;
+  transition: min-width 1s, min-height 1s;
+}
+.slider-container{
+  display: flex;
+  position: relative;
+  left: -425px;
+  align-items: center;
+
+  @media screen and (max-width: 380px) {
+    left: -800px;
+  }
+
+  @media screen and (min-width: 380px) and (max-width: 600px) {
+    left: -744px;
+  }
+
+  @media screen and (min-width: 600px) and (max-width: 1005px) {
+    left: -637px;
+  }
+}
+.slider-button{
+  position: relative;
+  top: 50%;
+  left: calc(50% - 108px);
+  z-index: 1;
+
+  .left-button{
+    margin-right: 150px;
+  }
+}
+
+.material-symbols-outlined {
+  background-color: #676767;
 }
