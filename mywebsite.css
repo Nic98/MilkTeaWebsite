@@ -326,7 +326,7 @@ body > div {
 }
 
 .contact {
-  background-color: #F7F7F7;
+  background-color: var(--bg);
 }
 
 .contact_text {
@@ -342,7 +342,7 @@ body > div {
   justify-content: center;
   align-items: center;
   gap: 20px;
-
+  position: relative;
 }
 
 .name {
@@ -350,11 +350,13 @@ body > div {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
   position: relative;
   height: 55px;
+  @media screen and (max-width: 600px) {
+    width: 267px;
+  }
 }
-
 .input {
   background-color: #937871;
   border:none;
@@ -364,20 +366,40 @@ body > div {
   padding:.8em 1.5em;
 }
 
+
 .subject_input {
-  width: 210%;
+  width: 523.85px;
 }
 
 .message_input {
-  width: 235%;
+  position: relative;
+  width: 523.85px;
   height: 200px;
 }
+
+.input-name, .input-email {
+  @media screen and (max-width: 600px) {
+    width: 130px;
+  }
+}
+
+.subject_input, .message_input {
+  @media screen and (max-width: 600px) {
+    width: 267px;
+  }
+}
+
+.contact .contact_text .text {
+  text-align: center;
+}
+
 
 .input::placeholder {
   color: white;
 }
 
-.btn-primary {
+.info .btn-primary {
+  position: relative;
   background-color: #fff;
   border: none;
   border-radius: 20px;
@@ -390,6 +412,15 @@ body > div {
   text-decoration: none;
   transition: all 0.3s ease;
   border:#11101d 1px;
+  top: -5px;
+  @media screen and (max-width: 600px) {
+    height: 50px;
+  }
+}
+
+.info .btn-primary:hover {
+  background-color: #937871;
+  color: #fff;
 }
 
 /* intro */
@@ -465,6 +496,7 @@ body > div {
 
 .intro .btn.btn-primary{
   transition: all 0.2s linear 0s;
+  top:10px;
   
   &:before {
     content: "\f178";
@@ -581,7 +613,7 @@ footer {
   .left-button, .right-button{
     height:24px;
   }
-
+  color: #d2d2d2;
   top: 50%;
   left: calc(50% - 108px);
   z-index: 1;
@@ -589,12 +621,16 @@ footer {
   .left-button{
     margin-right: 150px;
   }
-  transition: all 0.5s ease;
+  transition: all 0.4s ease;
 }
 
 .menu:hover {
   .slider-button{
     color:#032444;
+  }
+  .left-button, .right-button{
+    height:24px;
+    box-shadow: #d2d2d2 0px 0px 2px 0px;
   }
 }
 
