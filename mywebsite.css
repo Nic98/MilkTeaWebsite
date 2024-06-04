@@ -277,7 +277,7 @@ body > div {
 .home_content {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: auto;
   width: calc(100% - 70px);
   left:70px;
   transition: all 0.5s ease;
