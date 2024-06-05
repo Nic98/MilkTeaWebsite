@@ -378,6 +378,7 @@ body > div {
 }
 
 .input-name, .input-email {
+  width: 255px;
   @media screen and (max-width: 600px) {
     width: 130px;
   }
@@ -421,6 +422,16 @@ body > div {
 .info .btn-primary:hover {
   background-color: #937871;
   color: #fff;
+}
+
+.custom-position {
+  @media screen and (max-width: 600px) {
+    position: relative;
+    left: 10%;
+    width:80%;
+    height: 80%;
+    font-size: small;
+  }
 }
 
 /* intro */
