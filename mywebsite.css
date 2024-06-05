@@ -26,7 +26,7 @@ body {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif;
+  font-family:AmberlySans-Regular;
   z-index: 1;
 }
 
@@ -561,7 +561,7 @@ footer {
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
-  height: 330px;
+  height: 550px;
   @media screen and (max-width: 380px) {
     width: 267px;
   }
@@ -578,6 +578,28 @@ footer {
     width: 1026px;
   }
 }
+
+.bigger-mkt .figcaption {
+  position: relative;
+  text-align: center;
+  justify-content: center;
+  left: 0;
+  top: 0;
+  color: #11101d;
+  text-shadow: 0 0 1px white;
+  font-weight:bold;
+  z-index: 1;
+  transition: all 0.4s ease;
+}
+
+.mkt-box {
+  position: relative;
+  height: 500px;
+  width: 500px;
+  min-height: 500px;
+  min-width: 500px;
+}
+
 .mkt{
   height: 260px;
   width: 260px;
@@ -585,11 +607,13 @@ footer {
   min-width: 260px;
   transition: min-width 1s, min-height 1s;
 }
+
 .bigger-mkt{
   min-height: 300px;
   min-width: 300px;
   transition: min-width 1s, min-height 1s;
 }
+
 .slider-container{
   display: flex;
   position: relative;
@@ -608,13 +632,14 @@ footer {
     left: -637px;
   }
 }
+
 .slider-button{
   position: relative;
   .left-button, .right-button{
     height:24px;
   }
   color: #d2d2d2;
-  top: 50%;
+  top: 30%;
   left: calc(50% - 108px);
   z-index: 1;
 
