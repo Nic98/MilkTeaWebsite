@@ -531,7 +531,7 @@ body > div {
   
   &:hover {
     text-indent: -20px;
-    
+    background-color: var(--milktea);
     &:before {
       opacity: 1;
       text-indent: 0px;
@@ -696,9 +696,10 @@ footer {
   text-transform: capitalize;
   font-size: 20px;
   padding: 20px 0px;
+  height: 45px;
   width: 180px;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 13px;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -709,7 +710,7 @@ footer {
   transition: all 0.2s linear 0s;
   background-color: var(--lightgray);
   color:var(--darkblue);
-  border-color: #11101d;
+  box-shadow: #11101d 0px 0px 1px 0px;
   &:before {
     content: "\f178";
     font-family: FontAwesome;
