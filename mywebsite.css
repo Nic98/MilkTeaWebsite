@@ -129,10 +129,12 @@ body > div {
   text-align: center;
   line-height: 50px;
   transform: translateX(-50%);
+  transition: all 0.5s ease;
 }
 
 .sidebar.active #btn{
-  left: 90%;
+  transform: rotate(181deg);
+  left: 80%;
 }
 
 .sidebar ul {
@@ -173,7 +175,7 @@ body > div {
 }
 
 .sidebar ul li:hover .tooltip{
-  transition: all 0.5s ease;
+  transition: all 0.4s ease;
   opacity: 1;
   top:50%;
   z-index: 3;
@@ -208,7 +210,7 @@ body > div {
 .sidebar .links_name{
   opacity: 0;
   pointer-events: none;
-  transition: all 0.5s ease;
+  transition: all 0.1s ease;
 }
 
 .sidebar.active .links_name {
@@ -279,7 +281,7 @@ body > div {
   height: auto;
   width: calc(100% - 70px);
   left:70px;
-  transition: all 0.5s ease;
+  transition: all 0.4s ease;
   z-index: 1;
   overflow-x: hidden;
 }
@@ -445,7 +447,7 @@ body > div {
   background-color: rgba(0, 0, 0, 0.5); /* 添加透明度，使背景颜色变暗 */
   background-blend-mode: multiply; /* 调整背景与背景颜色的混合模式 */
   width: 100%;
-  height: 100em;
+  height: 100vh;
 }
 
 .intro::before {
@@ -497,7 +499,7 @@ body > div {
   height: 10px;
   width: 150px;
   overflow: hidden;
-  border-radius: 15px;
+  border-radius: 10px;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -508,7 +510,8 @@ body > div {
 .intro .btn.btn-primary{
   transition: all 0.2s linear 0s;
   top:10px;
-  
+  background-color: var(--lightgray);
+  color:var(--darkblue);
   &:before {
     content: "\f178";
     font-family: FontAwesome;
@@ -567,8 +570,8 @@ footer {
 }
 
 .mkt-menu .menu{
-  max-width: 1026px;
-  width: 90%;
+  max-width: 1300px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
@@ -581,27 +584,34 @@ footer {
     width: 380px;
   }
 
-  @media screen and (min-width: 600px) and (max-width: 1005px) {
+  @media screen and (min-width: 600px) and (max-width: 1100px) {
     width: 600px;
   }
 
-  @media screen and (min-width: 1005px) and (max-width: 1205px) {
+  @media screen and (min-width: 1100px) and (max-width: 1380px) {
     width: 1026px;
   }
 }
 
+.figcaption {
+  display: none;
+}
+
 .bigger-mkt .figcaption {
+  display: block;
   position: relative;
   text-align: center;
   justify-content: center;
   left: 0;
   top: 0;
   color: #11101d;
+  font-size: x-large;
   text-shadow: 0 0 1px white;
   font-weight:bold;
   z-index: 1;
   transition: all 0.4s ease;
 }
+
 
 .mkt-box {
   position: relative;
@@ -628,7 +638,7 @@ footer {
 .slider-container{
   display: flex;
   position: relative;
-  left: -425px;
+  left: -288px;
   align-items: center;
 
   @media screen and (max-width: 380px) {
@@ -639,8 +649,12 @@ footer {
     left: -744px;
   }
 
-  @media screen and (min-width: 600px) and (max-width: 1005px) {
+  @media screen and (min-width: 600px) and (max-width: 1100px) {
     left: -637px;
+  }
+
+  @media screen and (min-width: 1100px) and (max-width: 1380px) {
+    left: -426px;
   }
 }
 
@@ -672,4 +686,75 @@ footer {
 
 .material-symbols-outlined {
   background-color:var(--lightgray);
+}
+
+
+
+.mkt-menu .menu-btn {
+  display: flex;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 20px;
+  padding: 20px 0px;
+  width: 180px;
+  overflow: hidden;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: AmberlySans-Regular;
+}
+
+.mkt-menu .menu-btn {
+  transition: all 0.2s linear 0s;
+  background-color: var(--lightgray);
+  color:var(--darkblue);
+  border-color: #11101d;
+  &:before {
+    content: "\f178";
+    font-family: FontAwesome;
+    font-size: 15px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    height: 100%;
+    width: 40px;
+    transition: all 0.2s linear 0s;
+    text-align: center;
+  }
+  
+  &:hover {
+    text-indent: -20px;
+    background-color: var(--milktea);
+    &:before {
+      opacity: 1;
+      text-indent: 0px;
+    }
+  }
+}
+
+.menu-btn {
+  position: relative;
+  top: 18%;
+  left:560px;
+
+  @media screen and (max-width: 380px) {
+    left: 80px;
+  }
+
+  @media screen and (min-width: 380px) and (max-width: 600px) {
+    left: 100px;
+  }
+
+  @media screen and (min-width: 600px) and (max-width: 1100px) {
+    left: 210px;
+  }
+
+  @media screen and (min-width: 1100px) and (max-width: 1380px) {
+    left: 421px;
+  }
 }
