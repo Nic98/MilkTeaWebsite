@@ -325,17 +325,22 @@ body > div {
   left:25%;
   position: relative;
   gap:2vw;
+
 }
 
 .contact {
   background-color: var(--bg);
+  box-shadow: #11101d 0px 0px 2px 0px ;
+  height: 100vh;
 }
 
 .contact_text {
+  padding-top: 100px;
   justify-content: center;
   align-items: center;
   display: flex;
   flex-direction: column;
+  
 }
 
 .inputbox{
@@ -360,10 +365,11 @@ body > div {
   }
 }
 .input {
-  background-color: #937871;
+  background-color: var(--lightgray);
   border:none;
-  border-radius: 20px;
-  color: #fff;
+  border-radius: 10px;
+  box-shadow: #11101d 0px 0px 2px 0px;
+  color: #032444;
   line-height: 25px;
   padding:.8em 1.5em;
 }
@@ -387,6 +393,7 @@ body > div {
 }
 
 .subject_input, .message_input {
+  resize: none;
   @media screen and (max-width: 600px) {
     width: 267px;
   }
@@ -398,14 +405,14 @@ body > div {
 
 
 .input::placeholder {
-  color: white;
+  color: var(--milktea);
 }
 
 .info .btn-primary {
   position: relative;
   background-color: #fff;
   border: none;
-  border-radius: 20px;
+  border-radius: 10px;
   color: #937871;
   cursor: pointer;
   font-size: 1em;
@@ -531,7 +538,7 @@ body > div {
   
   &:hover {
     text-indent: -20px;
-    background-color: var(--milktea);
+    background-color: #937871;
     &:before {
       opacity: 1;
       text-indent: 0px;
@@ -699,7 +706,7 @@ footer {
   height: 45px;
   width: 180px;
   overflow: hidden;
-  border-radius: 13px;
+  border-radius: 10px;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -730,7 +737,7 @@ footer {
   
   &:hover {
     text-indent: -20px;
-    background-color: var(--milktea);
+    background-color: #937871;
     &:before {
       opacity: 1;
       text-indent: 0px;
