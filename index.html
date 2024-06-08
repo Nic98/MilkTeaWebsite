@@ -27,7 +27,7 @@
 
     <ul class="nav_list">
         <li>
-            <a href="#">
+            <a href="#" id="home_btn">
                 <i class="fas fa-home"></i>
                 <span class="links_name">ComeBack</span>
             </a>
@@ -35,7 +35,7 @@
         </li>
 
         <li>
-            <a href="#">
+            <a href="#" id="menu_btn">
                 <i class="fa-solid fa-glass-water"></i>
                 <span class="links_name">Our Menu</span>
             </a>
@@ -43,7 +43,7 @@
         </li>
 
         <li>
-          <a href="#">
+          <a href="#" id="contact_btn">
               <i class="fa-solid fa-address-card"></i>
               <span class="links_name">Get in touch</span>
           </a>
@@ -77,10 +77,6 @@
   
   <!-- home content implementation -->
   <div class="home_content">
-    <!-- <div class="top">
-      <img src="./images/lftimg.jpg" alt="" class="lftimg">
-      <img src="./images/rgtimg.jpg" alt="" class="rgtimg">
-    </div> -->
 
     <div class="intro">
       <div class="intro_texts">
@@ -136,6 +132,7 @@
         </div>
         <button class="menu-btn"> See Our Menu </button>
       </div>
+      <p class="text menu-text">Our menu includes a variety of teas, tea lattes, and tea-based drinks. We also offer a selection of snacks and desserts to complement your tea. Our teas are made from the finest ingredients and are brewed to perfection. Come and visit us today and experience the taste of Foxy Tea.</p>
     </div>
 
     <div class="contact">
@@ -230,12 +227,6 @@
     }
   </script>
 
-  <!-- <script>
-    function confirm(){
-      alert("Thank you for your message. We will get back to you shortly.");
-    }
-  </script> -->
-
 
   <script>
     let btn = document.querySelector("#btn");
@@ -268,6 +259,21 @@
         }
       });
     }
+  </script>
+
+  <script>
+    document.getElementById('home_btn').addEventListener('click', function(){
+      document.querySelector('.home_content').scrollIntoView({behavior: 'smooth'});
+      event.preventDefault();
+    })
+    document.getElementById('menu_btn').addEventListener('click', function(){
+      document.querySelector('.mkt-menu').scrollIntoView({behavior: 'smooth'});
+      event.preventDefault();
+    })
+    document.getElementById('contact_btn').addEventListener('click', function(){
+      document.querySelector('.contact').scrollIntoView({behavior: 'smooth'});
+      event.preventDefault();
+    })
   </script>
 </body>
 </html>

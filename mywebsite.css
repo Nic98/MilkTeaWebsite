@@ -564,7 +564,7 @@ footer {
 /* milk tea menu */
 .mkt-menu{
   background-color: #fef7ee;
-  height: 650px;
+  height: 100vh;
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -757,5 +757,26 @@ footer {
 
   @media screen and (min-width: 1100px) and (max-width: 1380px) {
     left: 421px;
+  }
+}
+
+.menu-text-box {
+  align-items: center;
+  display: flex;
+  justify-self: center;
+}
+
+.mkt-menu .menu-text {
+  position: relative;
+  font-size: 25px;
+  font-weight: 500;
+  color:#1d1b31;
+  margin: 20px;
+  font-family: AmberlySans-Regular;
+  max-width: 100%;
+  left: 10px;
+  bottom: 65px;
+  @media screen and (max-width: 516px) {
+    display: none;
   }
 }
