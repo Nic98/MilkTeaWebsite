@@ -10,10 +10,14 @@
   <script src="https://kit.fontawesome.com/2dbcf482c2.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="mywebsite.css">
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <title>FoxyTea</title>
+  <!-- <title>FoxyTea</title> -->
 </head>
 <body>
-
+  <script>
+      const title = document.createElement('title');
+      title.textContent = 'FoxyTea';
+      document.head.appendChild(title);
+  </script>
   <header></header>
 
   <!-- sidebar implementation -->
