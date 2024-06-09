@@ -367,13 +367,17 @@ body > div {
 .input {
   background-color: var(--lightgray);
   border:none;
-  border-radius: 10px;
+  border-radius: 5px;
   box-shadow: #11101d 0px 0px 2px 0px;
   color: #032444;
   line-height: 25px;
   padding:.8em 1.5em;
+  outline: none;
 }
 
+.input:focus {
+  box-shadow: 0 0 5px var(--milktea) /* 添加阴影 */
+}
 
 .subject_input {
   width: 523.85px;
@@ -388,7 +392,7 @@ body > div {
 .input-name, .input-email {
   width: 255px;
   @media screen and (max-width: 600px) {
-    width: 130px;
+    width: 126px;
   }
 }
 
@@ -412,7 +416,7 @@ body > div {
   position: relative;
   background-color: #fff;
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
   color: #937871;
   cursor: pointer;
   font-size: 1em;
@@ -504,9 +508,9 @@ body > div {
   font-size: 20px;
   padding: 20px 0px;
   height: 10px;
-  width: 150px;
+  width: 180px;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 5px;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -707,7 +711,7 @@ footer {
   height: 45px;
   width: 180px;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 5px;
   justify-content: center;
   align-items: center;
   text-align: center;
