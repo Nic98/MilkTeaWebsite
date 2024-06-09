@@ -366,17 +366,21 @@ body > div {
 }
 .input {
   background-color: var(--lightgray);
-  border:none;
+  /* border:none; */
   border-radius: 5px;
   box-shadow: #11101d 0px 0px 2px 0px;
   color: #032444;
   line-height: 25px;
   padding:.8em 1.5em;
   outline: none;
+  transition: border-color 0.3s, background-color 0.3s, box-shadow 0.3s, font-weight 0.3s; /* 添加过渡效果 */
 }
 
 .input:focus {
-  box-shadow: 0 0 5px var(--milktea) /* 添加阴影 */
+  box-shadow: 0 0 2px var(--milktea);
+  border-color: var(--milktea);
+  background-color: rgb(255, 243, 224) ;
+  border-width: 1px !important; /* 加粗边框 */
 }
 
 .subject_input {
@@ -831,6 +835,7 @@ footer {
 
 .close:hover,
 .close:focus {
+  font-weight: bold;
   color: black;
   text-decoration: none;
   cursor: pointer;
