@@ -788,7 +788,9 @@ footer {
   }
 }
 
-
+#shareButton {
+  color:#fff;
+}
 .modal {
   display: none; /* Hidden by default */
   position: fixed;
@@ -814,9 +816,10 @@ footer {
 
 .close {
   /* color: #aaa; */
-  float: right;
+  left: 95%;
   font-size: 28px;
   font-weight: bold;
+  position: relative;
 }
 
 .close:hover,
