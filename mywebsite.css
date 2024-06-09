@@ -609,14 +609,15 @@ footer {
   position: relative;
   text-align: center;
   justify-content: center;
-  left: 0;
-  top: 0;
+  left: -24%;
+  top: 20px;
   color: #11101d;
   font-size: x-large;
   text-shadow: 0 0 1px white;
   font-weight:bold;
   z-index: 1;
   transition: all 0.4s ease;
+  width:150%;
 }
 
 
@@ -751,7 +752,7 @@ footer {
   left:560px;
 
   @media screen and (max-width: 380px) {
-    left: 80px;
+    left: 50px;
   }
 
   @media screen and (min-width: 380px) and (max-width: 600px) {
@@ -791,6 +792,7 @@ footer {
 #shareButton {
   color:#fff;
 }
+
 .modal {
   display: none; /* Hidden by default */
   position: fixed;
@@ -799,8 +801,9 @@ footer {
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
+  overflow: hidden;
   /* background-color: rgba(0, 0, 0, 0.4); */
+  translate: all 0.5s ease;
 }
 
 .modal-content {

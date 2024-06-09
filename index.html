@@ -159,27 +159,38 @@
       <form class="info" id="contactForm">
         <div class="name">
           <div class="inputbox">
-            <input type="text" name="name" required="required" class="input input-name" placeholder="Name">
+            <input id="name" type="text" name="name" required="required" class="input input-name" placeholder="Name">
           </div>
           <div class="inputbox">
-            <input type="text" name="email" required="required" class="input input-email" placeholder="Email">
+            <input id="email" type="text" name="email" required="required" class="input input-email" placeholder="Email">
           </div>
         </div>
         <div class="inputbox">
           <input type="text" name="email" required="required" class="input subject_input" placeholder="Subject">
         </div>
         <div class="inputbox">
-          <textarea name="message" required="required" class="input message_input" placeholder="Message"></textarea>
+          <textarea id="message" name="message" required="required" class="input message_input" placeholder="Message"></textarea>
         </div>
         <button class="btn btn-primary" type="submit">Submit form</button>
       </form>
-      </div>
+    </div>
     <footer>
       <p>© 2024 FoxyTea. All rights reserved.</p>
     </footer>
   </div>
 
-
+  <script>
+    document
+    .getElementById("contactForm")
+    .addEventListener("submit", async (e) => {
+      e.preventDefault();
+      await submitContact(
+        document.getElementById("name").value,
+        document.getElementById("email").value,
+        document.getElementById("message").value
+      );
+    });
+  </script>
 
 
   <script>
