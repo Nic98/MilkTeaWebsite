@@ -116,37 +116,39 @@
           </button>
         </span>
         <div id="slider-container" class="slider-container">
-          <div class="mkt" style="order: 1">
+     
+          <div class="mkt" style="order: 1" id="mkt1">
             <img src="./images/mkt1.png" alt="mkt1">
-            <p class="figcaption">Brown Sugar Latte with Pearls</p>
+            <!-- <p class="figcaption">Brown Sugar Latte with Pearls</p> -->
           </div>
-          <div class="mkt" style="order: 2">
+          <div class="mkt" style="order: 2" id="mkt2">
             <img src="./images/mkt2.png" alt="">
-            <p class="figcaption">Oolong Milk Tea and Coffee Jelly Fusion</p>
+            <!-- <p class="figcaption">Oolong Milk Tea and Coffee Jelly Fusion</p> -->
           </div>
-          <div class="mkt" style="order: 3">
+          <div class="mkt" style="order: 3" id="mkt3">
             <img src="./images/mkt3.png" alt="">
-            <p class="figcaption">Jasmine Green Tea with Plum Jello</p>
+            <!-- <p class="figcaption">Jasmine Green Tea with Plum Jello</p> -->
           </div>
-          <div class="mkt bigger-mkt" style="order: 4">
+          <div class="mkt bigger-mkt" style="order: 4" id="mkt4">
             <img src="./images/mkt4.png" alt="">
-            <p class="figcaption">Oat Milk Mango Smoothie</p>
+            <!-- <p class="figcaption">Oat Milk Mango Smoothie</p> -->
           </div>
-          <div class="mkt" style="order: 5">
+          <div class="mkt" style="order: 5" id="mkt5">
             <img src="./images/mkt5.png" alt="">
-            <p class="figcaption">Mango Cream Smoothie with Grapefruit and Kanten Jelly</p>
+            <!-- <p class="figcaption">Mango Cream Smoothie with Grapefruit and Kanten Jelly</p> -->
           </div>
-          <div class="mkt" style="order: 6">
+          <div class="mkt" style="order: 6" id="mkt6">
             <img src="./images/mkt6.png" alt="">
-            <p class="figcaption">Mango smoothie</p>
+            <!-- <p class="figcaption">Mango smoothie</p> -->
           </div>
-          <div class="mkt" style="order: 7">
+          <div class="mkt" style="order: 7" id="mkt7">
             <img src="./images/mkt7.png" alt="">
-            <p class="figcaption">Cream Cheese Foam Mango Smoothie</p>
+            <!-- <p class="figcaption">Cream Cheese Foam Mango Smoothie</p> -->
           </div>
         </div>
-        <button class="menu-btn"> See Our Menu </button>
       </div>
+      <p class="figcaption">Oat Milk Mango Smoothie</p>
+      <button class="menu-btn"> See Our Menu </button>
       <p class="text menu-text">Our menu includes a variety of teas, tea lattes, and tea-based drinks. We also offer a selection of snacks and desserts to complement your tea. Our teas are made from the finest ingredients and are brewed to perfection. Come and visit us today and experience the taste of Foxy Tea.</p>
     </div>
 
@@ -193,7 +195,6 @@
     });
   </script>
 
-
   <script>
 
     function slideLeft(){
@@ -222,7 +223,20 @@
       sliderContainer.style.left = currentLeft + 'px';
       sliderContainer.style.transition = 'left 1s';
       
-      
+      drink_name_map = {
+        1: "Brown Sugar Latte with Pearls",
+        2: "Oolong Milk Tea and Coffee Jelly Fusion",
+        3: "Jasmine Green Tea with Plum Jello",
+        4: "Oat Milk Mango Smoothie",
+        5: "Mango Cream Smoothie with Grapefruit and Kanten Jelly",
+        6: "Mango smoothie",
+        7: "Cream Cheese Foam Mango Smoothie"
+      }
+      let figcaption = document.querySelector(".figcaption");
+      let mkt = document.querySelector(".bigger-mkt");
+      let id = mkt.id;
+      let mkt_id = parseInt(id.split("mkt")[1]);
+      figcaption.innerHTML = drink_name_map[mkt_id];
     }
 
     function slideRight(){
@@ -251,9 +265,26 @@
       
       sliderContainer.style.left = currentLeft + 'px';
       sliderContainer.style.transition = 'left 1s';
+      drink_name_map = {
+        1: "Brown Sugar Latte with Pearls",
+        2: "Oolong Milk Tea and Coffee Jelly Fusion",
+        3: "Jasmine Green Tea with Plum Jello",
+        4: "Oat Milk Mango Smoothie",
+        5: "Mango Cream Smoothie with Grapefruit and Kanten Jelly",
+        6: "Mango smoothie",
+        7: "Cream Cheese Foam Mango Smoothie"
+      }
+      let figcaption = document.querySelector(".figcaption");
+      let mkt = document.querySelector(".bigger-mkt");
+      let id = mkt.id;
+      let mkt_id = parseInt(id.split("mkt")[1]);
+      figcaption.innerHTML = drink_name_map[mkt_id];
     }
   </script>
 
+  <script>
+
+  </script>
 
   <script>
     let btn = document.querySelector("#btn");
