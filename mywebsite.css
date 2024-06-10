@@ -468,6 +468,7 @@ body > div {
   @media screen and (max-width: 600px) {
     height: 50px;
   }
+  
 }
 
 
@@ -531,6 +532,12 @@ body > div {
   color:#fff;
   margin: 20px;
   font-family: AmberlySans-Regular;
+  @media screen and (max-width: 380px){
+    font-size: 15px;
+  }
+  @media screen and (min-width: 380px) and (max-width: 600px) {
+    font-size: 20px;
+  }
 }
 
 .intro .btn {
@@ -821,8 +828,11 @@ footer {
   max-width: 100%;
   left: 10px;
   bottom: 65px;
-  @media screen and (max-width: 516px) {
-    display: none;
+  @media screen and (max-width: 380px){
+    font-size: 15px;
+  }
+  @media screen and (min-width: 380px) and (max-width: 600px) {
+    font-size: 20px;
   }
 }
 
