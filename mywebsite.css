@@ -657,8 +657,6 @@ footer {
   position: relative;
   text-align: center;
   justify-content: center;
-  /* left: -24%; */
-  /* top: 20px; */
   top: -177px;
   color: #11101d;
   font-size: x-large;
@@ -666,11 +664,16 @@ footer {
   font-weight:bold;
   z-index: 1;
   width:150%;
+  opacity: 1; /* 初始状态为不可见 */
+  transition: opacity 0.5s; /* 过渡效果 */
 }
 
-.bigger-mkt .figcaption {
-  display: block;
-  transition: all 0.4s ease-in-out;
+.fade-out {
+  opacity: 0; /* 淡出 */
+}
+
+.fade-in {
+  opacity: 1; /* 淡入 */
 }
 
 
