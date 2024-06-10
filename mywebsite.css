@@ -330,8 +330,8 @@ body > div {
 
 .contact {
   background-color: var(--bg);
-  box-shadow: #11101d 0px 0px 2px 0px ;
-  height: 100vh;
+  box-shadow: none;
+  height: fit-content;
 }
 
 .contact_text {
@@ -416,30 +416,60 @@ body > div {
   color: var(--milktea);
 }
 
-.info .btn-primary {
+.info .btn {
+  box-shadow: #11101d 0px 0px 1px 0px;
+  display: flex;
   position: relative;
-  background-color: #fff;
-  border: none;
-  border-radius: 5px;
-  color: #937871;
-  cursor: pointer;
-  font-size: 1em;
-  line-height: 25px;
-  padding: .8em 1.5em;
-  text-align: center;
   text-decoration: none;
-  transition: all 0.3s ease;
-  border:#11101d 1px;
-  top: -5px;
+  text-transform: capitalize;
+  font-size: 20px;
+  padding: 20px 0px;
+  height: 10px;
+  width: 180px;
+  overflow: hidden;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  bottom: 10px;
+  font-family: AmberlySans-Regular;
+}
+
+.info .btn.btn-primary{
+  transition: all 0.2s linear 0s;
+  background-color: var(--lightgray);
+  color:var(--darkblue);
+  &:before {
+    content: "\f178";
+    font-family: FontAwesome;
+    font-size: 15px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    height: 100%;
+    width: 40px;
+    transition: all 0.2s linear 0s;
+    text-align: center;
+  }
+  
+  &:hover {
+    text-indent: -20px;
+    background-color: #937871;
+    &:before {
+      opacity: 1;
+      text-indent: 0px;
+    }
+  }
+
   @media screen and (max-width: 600px) {
     height: 50px;
   }
 }
 
-.info .btn-primary:hover {
-  background-color: #937871;
-  color: #fff;
-}
 
 .custom-position {
   @media screen and (max-width: 600px) {
@@ -504,7 +534,6 @@ body > div {
 }
 
 .intro .btn {
-  /* text-align: center; */
   display: flex;
   position: relative;
   text-decoration: none;
@@ -579,7 +608,7 @@ footer {
 /* milk tea menu */
 .mkt-menu{
   background-color: #fef7ee;
-  height: 100vh;
+  height: fit-content;
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -712,7 +741,7 @@ footer {
   text-transform: capitalize;
   font-size: 20px;
   padding: 20px 0px;
-  height: 45px;
+  height: 10px;
   width: 180px;
   overflow: hidden;
   border-radius: 5px;
