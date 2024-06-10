@@ -292,7 +292,7 @@ body > div {
 }
 
 .home_content .text {
-  font-size: 22px;
+  font-size: 25px;
   font-weight: 500;
   color: #1d1b31;
   margin:12px;
@@ -333,11 +333,12 @@ body > div {
   box-shadow: none;
   height: fit-content;
 }
+/*  */
 
 .contact_text {
+  display: flex;
   justify-content: center;
   align-items: center;
-  display: flex;
   flex-direction: column;
 }
 
@@ -414,11 +415,6 @@ body > div {
   }
 }
 
-.contact .contact_text .text {
-  text-align: center;
-}
-
-
 .input::placeholder {
   color: var(--milktea);
 }
@@ -479,7 +475,6 @@ body > div {
   }
   
 }
-
 
 .custom-position {
   @media screen and (max-width: 600px) {
@@ -627,6 +622,10 @@ footer {
   height: fit-content;
   padding-top: 60px;
   padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .mkt-menu .menu{
@@ -822,8 +821,8 @@ footer {
 }
 
 .menu-text-box {
-  align-items: center;
   display: flex;
+  align-items: center;
   justify-self: center;
 }
 
@@ -834,8 +833,8 @@ footer {
   color:#1d1b31;
   margin: 20px;
   font-family: AmberlySans-Regular;
-  max-width: 100%;
-  left: 10px;
+  /* max-width: 80%;
+  left: 5%; */
   bottom: 65px;
   @media screen and (max-width: 380px){
     font-size: 15px;
