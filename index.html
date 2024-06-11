@@ -296,9 +296,25 @@
       let mkt = document.querySelector(".bigger-mkt");
       let id = mkt.id;
       let mkt_id = parseInt(id.split("mkt")[1]);
-      figcaption.innerHTML = drink_name_map[mkt_id];
-      figcaption.classList.add("visible");
+      
+      // 先淡出
+      figcaption.classList.remove("fade-in");
+      figcaption.classList.add("fade-out");
+
+
+      // 等待淡出动画完成，然后更新内容并淡入
+      setTimeout(function() {
+        figcaption.innerHTML = drink_name_map[mkt_id];// 更新内容
+        figcaption.classList.remove("fade-out");
+        figcaption.classList.add("fade-in");
+      }, 500); // 这里的1000应该和CSS中的transition时间一致
     }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      var figcaption = document.querySelector(".figcaption");
+      figcaption.classList.add("fade-in"); // 初始状态为淡入
+    });
+
   </script>
 
   <script>
