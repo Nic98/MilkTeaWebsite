@@ -871,18 +871,58 @@ footer {
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
+  width: 66%;
   max-width: 600px;
   border-radius: 10px;
   color: var(--lightgray);
+  position: absolute;
+  left:31%;
+
+  @media screen and (max-width: 380px) {
+    width: 250px;
+    left:25%;
+  }
+  @media screen and (min-width: 380px) and (max-width: 600px) {
+    width: 66%;
+    left:25%;
+  }
+  @media screen and (min-width: 600px) and (max-width: 1100px) {
+    width: 66%;
+    left:25%;
+  }
+}
+
+h2 {
+  position:relative;
+  bottom: 60px;
+}
+
+.modal-content ul {
+  position: relative;
+  bottom:30px;
+}
+
+a:link, a:visited {
+  color: var(--lightgray);
+  text-decoration: none;
+}
+
+a:hover {
+  color:var(--bg);
+  text-decoration: underline;
+}
+
+a:active {
+  color: var(--darkblue);
 }
 
 .close {
   /* color: #aaa; */
   left: 95%;
-  font-size: 28px;
+  font-size: 45px;
   font-weight: bold;
   position: relative;
+  z-index: 100;
 }
 
 .close:hover,
