@@ -446,8 +446,8 @@ body > div {
 
 .info .btn.btn-primary{
   transition: all 0.2s linear 0s;
-  background-color: var(--lightgray);
-  color:var(--darkblue);
+  background-color: var(--milktea);
+  color:var(--lightgray);
   &:before {
     content: "\f178";
     font-family: FontAwesome;
@@ -565,8 +565,8 @@ body > div {
 .intro .btn.btn-primary{
   transition: all 0.2s linear 0s;
   top:10px;
-  background-color: var(--lightgray);
-  color:var(--darkblue);
+  background-color: var(--milktea);
+  color:var(--lightgray);
   &:before {
     content: "\f178";
     font-family: FontAwesome;
@@ -729,11 +729,11 @@ footer {
   }
   color: #d2d2d2;
   top: 30%;
-  left: calc(50% - 108px);
+  left: calc(50% - 125px);
   z-index: 1;
 
   .left-button{
-    margin-right: 150px;
+    margin-right: 180px;
   }
   transition: all 0.4s ease;
 }
@@ -744,7 +744,7 @@ footer {
   }
   .left-button, .right-button{
     height:24px;
-    box-shadow: #d2d2d2 0px 0px 2px 0px;
+    box-shadow: #d2d2d2 0px 0px 10px 0px;
   }
 }
 
@@ -772,8 +772,8 @@ footer {
 
 .mkt-menu .menu-btn {
   transition: all 0.2s linear 0s;
-  background-color: var(--lightgray);
-  color:var(--darkblue);
+  background-color: var(--milktea);
+  color:var(--lightgray);
   box-shadow: #11101d 0px 0px 1px 0px;
   &:before {
     content: "\f178";
