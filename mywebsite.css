@@ -686,39 +686,44 @@ footer {
 }
 
 .mkt{
-  height: 260px;
+
+  height: 200px;
   width: 260px;
-  min-height: 260px;
-  min-width: 260px;
-  transition: min-width 1s, min-height 1s;
+  min-height: 200px;
+  min-width: 200px;
+  transition: min-width 1.5s, min-height 1.5s;
 }
 
 .bigger-mkt{
   min-height: 300px;
   min-width: 300px;
-  transition: min-width 1s, min-height 1s;
+  transition: min-width 1.5s, min-height 1.5s;
 }
 
 .slider-container{
   display: flex;
   position: relative;
-  left: -288px;
+  left: -107px;
   align-items: center;
   
   @media screen and (max-width: 380px) {
-    left: -800px;
+    left: -630px;
   }
 
-  @media screen and (min-width: 380px) and (max-width: 600px) {
-    left: -744px;
+  @media screen and (min-width: 380px) and (max-width: 450px) {
+    left: -570px;
+  }
+
+  @media screen and (min-width: 450px) and (max-width: 600px) {
+    left: -570px;
   }
 
   @media screen and (min-width: 600px) and (max-width: 1100px) {
-    left: -637px;
+    left: -460px;
   }
 
   @media screen and (min-width: 1100px) and (max-width: 1380px) {
-    left: -426px;
+    left: -248px;
   }
 }
 
