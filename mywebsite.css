@@ -673,6 +673,9 @@ footer {
   width:150%;
   opacity: 1; /* 初始状态为不可见 */
   transition: opacity 0.5s; /* 过渡效果 */
+  @media screen and (max-width: 500px) {
+    font-size: large;    
+  }
 }
 
 .fade-out {
@@ -953,4 +956,49 @@ a:active {
 
 .modal ul li {
   margin: 10px 0;
+}
+
+.location {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg);
+}
+
+
+.location_info .text{
+  font-size: 18px;
+  font-weight: 500;
+  color:#1d1b31;
+  font-family: AmberlySans-Regular;
+  @media screen and (max-width: 380px){
+    font-size: 15px;
+  }
+  @media screen and (min-width: 380px) and (max-width: 600px) {
+    font-size: 15px;
+  }
+  @media screen and (min-width: 600px) and (max-width: 900px) {
+    font-size: 16px;
+  }
+}
+
+.location_text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 100px;
+  color:#1d1b31;
+  padding-bottom: 20px;
+  @media screen and (max-width: 850px){
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.location_info .title.text {
+  font-size:25px;
+  padding-left: 36px;
 }

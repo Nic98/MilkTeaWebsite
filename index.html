@@ -41,6 +41,14 @@
         </li>
 
         <li>
+            <a href="#" id="loc_btn">
+              <i class="fa-solid fa-glass-water"></i>
+              <span class="links_name">Our Menu</span>
+            </a>
+            <span class = "tooltip">Our Menu</span>
+        </li>
+        
+        <li>
           <a href="#" id="contact_btn">
               <i class="fa-solid fa-address-card"></i>
               <span class="links_name">Get in touch</span>
@@ -146,6 +154,50 @@
       <p class="text menu-text">Our menu includes a variety of teas, tea lattes, and tea-based drinks. We also offer a selection of snacks and desserts to complement your tea. Our teas are made from the finest ingredients and are brewed to perfection. Come and visit us today and experience the taste of Foxy Tea.</p>
     </div>
 
+    <div class="location">
+      <p class="title">Our Locations</p>
+      <div class="location_text">
+        <div class="location_info">
+          <p class="title text">Foxy Tea Australia</p>
+          <p class="text">Address:123 Main Street, Sydney, NSW 2000</p>
+          <p class="text">Phone: 123-456-7890</p>
+          <p class="text">Hours: Mon-Sun 9am-9pm</p>
+        </div>
+        <div class="location_info">
+          <p class="title text">Foxy Tea Australia</p>
+          <p class="text">Address: 123 Main Street, Sydney, NSW 2000</p>
+          <p class="text">Phone: 123-456-7890</p>
+          <p class="text">Hours: Mon-Sun 9am-9pm</p>
+        </div> 
+        <div class="location_info">
+          <p class="title text">Foxy Tea Australia</p>
+          <p class="text">Address:123 Main Street, Sydney, NSW 2000</p>
+          <p class="text">Phone: 123-456-7890</p>
+          <p class="text">Hours: Mon-Sun 9am-9pm</p>
+        </div> 
+      </div>
+      <div class="location_text">
+        <div class="location_info">
+          <p class="title text">Foxy Tea Australia</p>
+          <p class="text">Address:123 Main Street, Sydney, NSW 2000</p>
+          <p class="text">Phone: 123-456-7890</p>
+          <p class="text">Hours: Mon-Sun 9am-9pm</p>
+        </div>
+        <div class="location_info">
+          <p class="title text">Foxy Tea Australia</p>
+          <p class="text">Address:123 Main Street, Sydney, NSW 2000</p>
+          <p class="text">Phone: 123-456-7890</p>
+          <p class="text">Hours: Mon-Sun 9am-9pm</p>
+        </div> 
+        <div class="location_info">
+          <p class="title text">Foxy Tea Australia</p>
+          <p class="text">Address:123 Main Street, Sydney, NSW 2000</p>
+          <p class="text">Phone: 123-456-7890</p>
+          <p class="text">Hours: Mon-Sun 9am-9pm</p>
+        </div> 
+      </div> 
+    </div>
+
     <div class="contact">
       <div class="contact_text">
         <p class="title">Get in touch</p>
@@ -171,6 +223,7 @@
         <button class="btn btn-primary" type="submit">Submit form</button>
       </form>
     </div>
+
     <footer>
       <div class="cpr">&copy; 2024 FoxyTea. All rights reserved.</div>
       <div class="cpr">For permissions or licensing requests, please contact us at: </div>
@@ -225,7 +278,7 @@
         2: "Oolong Milk Tea and Coffee Jelly Fusion",
         3: "Jasmine Green Tea with Plum Jello",
         4: "Oat Milk Mango Smoothie",
-        5: "Mango Cream Smoothie with Grapefruit and Kanten Jelly",
+        5: "Mango Cream Smoothie with Grapefruit",
         6: "Mango smoothie",
         7: "Cream Cheese Foam Mango Smoothie"
       }
@@ -285,7 +338,7 @@
         2: "Oolong Milk Tea and Coffee Jelly Fusion",
         3: "Jasmine Green Tea with Plum Jello",
         4: "Oat Milk Mango Smoothie",
-        5: "Mango Cream Smoothie with Grapefruit and Kanten Jelly",
+        5: "Mango Cream Smoothie with Grapefruit",
         6: "Mango smoothie",
         7: "Cream Cheese Foam Mango Smoothie"
       }
@@ -358,6 +411,10 @@
     })
     document.getElementById('menu_btn').addEventListener('click', function(){
       document.querySelector('.mkt-menu').scrollIntoView({behavior: 'smooth'});
+      event.preventDefault();
+    })
+    document.getElementById('loc_btn').addEventListener('click', function(){
+      document.querySelector('.location').scrollIntoView({behavior: 'smooth'});
       event.preventDefault();
     })
     document.getElementById('contact_btn').addEventListener('click', function(){
