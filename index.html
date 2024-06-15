@@ -147,21 +147,21 @@
             <img src="./images/mkt7.png" alt="">
             <!-- <p class="figcaption">Cream Cheese Foam Mango Smoothie</p> -->
           </div>
-          <div class="mkt" style="order: 8" id="mkt7">
-            <img src="./images/mkt7.png" alt="">
+          <div class="mkt" style="order: 8" id="mkt8">
+            <img src="./images/mkt8.png" alt="">
             <!-- <p class="figcaption">Cream Cheese Foam Mango Smoothie</p> -->
           </div>
-          <div class="mkt" style="order: 9" id="mkt7">
-            <img src="./images/mkt7.png" alt="">
+          <div class="mkt" style="order: 9" id="mkt9">
+            <img src="./images/mkt9.png" alt="">
             <!-- <p class="figcaption">Cream Cheese Foam Mango Smoothie</p> -->
           </div>
-          <div class="mkt" style="order: 10" id="mkt7">
-            <img src="./images/mkt7.png" alt="">
+          <div class="mkt" style="order: 10" id="mkt10">
+            <img src="./images/mkt10.png" alt="">
             <!-- <p class="figcaption">Cream Cheese Foam Mango Smoothie</p> -->
           </div>
         </div>
       </div>
-      <p class="figcaption">Oat Milk Mango Smoothie</p>
+      <p class="figcaption">Mango Cream Smoothie with Grapefruit</p>
       <button class="menu-btn"> See Our Menu </button>
       <p class="text menu-text">Our menu includes a variety of teas, tea lattes, and tea-based drinks. We also offer a selection of snacks and desserts to complement your tea. Our teas are made from the finest ingredients and are brewed to perfection. Come and visit us today and experience the taste of Foxy Tea.</p>
     </div>
@@ -311,11 +311,11 @@
         3: "Jasmine Green Tea with Plum Jello",
         4: "Oat Milk Mango Smoothie",
         5: "Mango Cream Smoothie with Grapefruit",
-        6: "Mango smoothie",
-        7: "Cream Cheese Foam Mango Smoothie",
-        8: "Cream Cheese Foam Mango Smoothie",
-        9: "Cream Cheese Foam Mango Smoothie",
-        10: "Cream Cheese Foam Mango Smoothie",
+        6: "Cream Cheese Foam Mango Smoothie",
+        7: "Mango smoothie",
+        8: "Mango Smoothie with Panna Cotta",
+        9: "Black Milk Tea with Creme Brulee",
+        10: "Black Milk Tea with Mini Taro Balls",
       }
       let figcaption = document.querySelector(".figcaption");
       let mkt = document.querySelector(".bigger-mkt");
@@ -368,17 +368,18 @@
       
       sliderContainer.style.left = currentLeft + 'px';
       sliderContainer.style.transition = 'left 1s';
+      
       drink_name_map = {
         1: "Brown Sugar Latte with Pearls",
         2: "Oolong Milk Tea and Coffee Jelly Fusion",
         3: "Jasmine Green Tea with Plum Jello",
         4: "Oat Milk Mango Smoothie",
         5: "Mango Cream Smoothie with Grapefruit",
-        6: "Mango smoothie",
-        7: "Cream Cheese Foam Mango Smoothie",
-        8: "Cream Cheese Foam Mango Smoothie",
-        9: "Cream Cheese Foam Mango Smoothie",
-        10: "Cream Cheese Foam Mango Smoothie",
+        6: "Cream Cheese Foam Mango Smoothie",
+        7: "Mango smoothie",
+        8: "Mango Smoothie with Panna Cotta",
+        9: "Black Milk Tea with Creme Brulee",
+        10: "Black Milk Tea with Mini Taro Balls",
       }
       let figcaption = document.querySelector(".figcaption");
       let mkt = document.querySelector(".bigger-mkt");
@@ -411,6 +412,7 @@
 
     btn.onclick = function() {
         sidebar.classList.toggle("active");
+        document.body.classList.toggle("no-scroll");
     }
   </script>
 
@@ -472,5 +474,6 @@
         }
     };
   </script>
+
 </body>
 </html>

@@ -291,11 +291,12 @@ body > div {
   /* left:250px;
   width: calc(100% - 240px); */
   filter: blur(3px); /* 添加5像素的模糊效果 */
-  overflow: hidden; /* 禁用滚动 */
-  position: fixed;
-  width: 100%;
+
 }
 
+.no-scroll {
+  overflow: hidden;
+}
 
 .home_content .text {
   font-size: 25px;
