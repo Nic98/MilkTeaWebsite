@@ -76,7 +76,7 @@ body > div {
   padding:6px 14px;
   transition: all 0.5s ease;
   z-index: 2;
-  box-shadow: #11101d 0px 0px 5px 0px;
+  box-shadow: #11101d 0px 0px 80px 0px;
   border-color: #11101d;
 }
 
@@ -288,9 +288,14 @@ body > div {
 }
 
 .sidebar.active ~ .home_content {
-  left:250px;
-  width: calc(100% - 240px);
+  /* left:250px;
+  width: calc(100% - 240px); */
+  filter: blur(3px); /* 添加5像素的模糊效果 */
+  overflow: hidden; /* 禁用滚动 */
+  position: fixed;
+  width: 100%;
 }
+
 
 .home_content .text {
   font-size: 25px;
@@ -634,29 +639,82 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
 }
 
 .mkt-menu .menu{
-  max-width: 1300px;
-  width: 100%;
+
+  max-width: 1700px;
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
   height: 550px;
-  @media screen and (max-width: 380px) {
-    width: 267px;
+
+  @media screen and (max-width: 660px) {
+    width: 300px;
   }
 
-  @media screen and (min-width: 380px) and (max-width: 600px) {
-    width: 380px;
+  @media screen and (min-width: 660px) and (max-width: 770px) {
+    width: 500px;
   }
 
-  @media screen and (min-width: 600px) and (max-width: 1100px) {
-    width: 600px;
+  @media screen and (min-width: 770px) and (max-width: 870px) {
+    width: 700px;
+  }
+
+  @media screen and (min-width: 870px) and (max-width: 970px) {
+    width: 760px;
+  }
+
+  @media screen and (min-width: 970px) and (max-width: 1100px) {
+    width: 900px;
+  }
+  @media screen and (min-width: 1100px) and (max-width: 1380px) {
+    width: 1026px;
+  }
+  @media screen and (min-width: 1380px) and (max-width: 1600px) {
+    width: 1300px;
+  }
+  @media screen and (min-width: 1600px) and (max-width: 1800px) {
+    width: 1500px;
+  }
+}
+
+.slider-container{
+  display: flex;
+  position: relative;
+  left: -110px;
+  align-items: center;
+
+
+  @media screen and (max-width: 660px) {
+    left: -810px;
+  }
+
+  @media screen and (min-width: 660px) and (max-width: 770px) {
+    left: -710px;
+  }
+
+  @media screen and (min-width: 770px) and (max-width: 870px) {
+    left: -610px;
+  }
+
+  @media screen and (min-width: 870px) and (max-width: 970px) {
+    left: -580px;
+  }
+
+  @media screen and (min-width: 970px) and (max-width: 1100px) {
+    left: -512px;
   }
 
   @media screen and (min-width: 1100px) and (max-width: 1380px) {
-    width: 1026px;
+    left: -448px;
+  }
+  @media screen and (min-width: 1380px) and (max-width: 1600px) {
+    left: -310px;
+  }
+  @media screen and (min-width: 1600px) and (max-width: 1800px) {
+    left: -214px;
   }
 }
 
@@ -667,15 +725,15 @@ footer {
   justify-content: center;
   top: -177px;
   color: #11101d;
-  font-size: x-large;
+  font-size:30px;
   text-shadow: 0 0 1px white;
   font-weight:bold;
   z-index: 1;
   width:150%;
   opacity: 1; /* 初始状态为不可见 */
   transition: opacity 0.5s; /* 过渡效果 */
-  @media screen and (max-width: 500px) {
-    font-size: large;    
+  @media screen and (max-width: 700px) {
+    font-size: 20px;    
   }
 }
 
@@ -712,32 +770,7 @@ footer {
 
 }
 
-.slider-container{
-  display: flex;
-  position: relative;
-  left: -107px;
-  align-items: center;
 
-  @media screen and (max-width: 380px) {
-    left: -630px;
-  }
-
-  @media screen and (min-width: 380px) and (max-width: 450px) {
-    left: -570px;
-  }
-
-  @media screen and (min-width: 450px) and (max-width: 600px) {
-    left: -570px;
-  }
-
-  @media screen and (min-width: 600px) and (max-width: 1100px) {
-    left: -460px;
-  }
-
-  @media screen and (min-width: 1100px) and (max-width: 1380px) {
-    left: -248px;
-  }
-}
 
 .slider-button{
   position: relative;

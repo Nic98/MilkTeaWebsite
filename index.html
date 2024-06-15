@@ -131,11 +131,11 @@
             <img src="./images/mkt3.png" alt="">
             <!-- <p class="figcaption">Jasmine Green Tea with Plum Jello</p> -->
           </div>
-          <div class="mkt bigger-mkt" style="order: 4" id="mkt4">
+          <div class="mkt" style="order: 4" id="mkt4">
             <img src="./images/mkt4.png" alt="">
             <!-- <p class="figcaption">Oat Milk Mango Smoothie</p> -->
           </div>
-          <div class="mkt" style="order: 5" id="mkt5">
+          <div class="mkt bigger-mkt" style="order: 5" id="mkt5">
             <img src="./images/mkt5.png" alt="">
             <!-- <p class="figcaption">Mango Cream Smoothie with Grapefruit and Kanten Jelly</p> -->
           </div>
@@ -144,6 +144,18 @@
             <!-- <p class="figcaption">Mango smoothie</p> -->
           </div>
           <div class="mkt" style="order: 7" id="mkt7">
+            <img src="./images/mkt7.png" alt="">
+            <!-- <p class="figcaption">Cream Cheese Foam Mango Smoothie</p> -->
+          </div>
+          <div class="mkt" style="order: 8" id="mkt7">
+            <img src="./images/mkt7.png" alt="">
+            <!-- <p class="figcaption">Cream Cheese Foam Mango Smoothie</p> -->
+          </div>
+          <div class="mkt" style="order: 9" id="mkt7">
+            <img src="./images/mkt7.png" alt="">
+            <!-- <p class="figcaption">Cream Cheese Foam Mango Smoothie</p> -->
+          </div>
+          <div class="mkt" style="order: 10" id="mkt7">
             <img src="./images/mkt7.png" alt="">
             <!-- <p class="figcaption">Cream Cheese Foam Mango Smoothie</p> -->
           </div>
@@ -277,14 +289,14 @@
         let currentOrder = parseInt(window.getComputedStyle(mkt).order);
         currentOrder -= 1;
 
-        if(currentOrder === 4){
+        if(currentOrder === 5){
           mkt.classList.add("bigger-mkt");
         }
-        if(currentOrder === 3){
+        if(currentOrder === 4){
           mkt.classList.remove("bigger-mkt");
         }
         if(currentOrder < 1) {
-          currentOrder += 7;
+          currentOrder += 10;
         }
         mkt.style.order = currentOrder.toString();
       };
@@ -300,7 +312,10 @@
         4: "Oat Milk Mango Smoothie",
         5: "Mango Cream Smoothie with Grapefruit",
         6: "Mango smoothie",
-        7: "Cream Cheese Foam Mango Smoothie"
+        7: "Cream Cheese Foam Mango Smoothie",
+        8: "Cream Cheese Foam Mango Smoothie",
+        9: "Cream Cheese Foam Mango Smoothie",
+        10: "Cream Cheese Foam Mango Smoothie",
       }
       let figcaption = document.querySelector(".figcaption");
       let mkt = document.querySelector(".bigger-mkt");
@@ -337,14 +352,14 @@
         let currentOrder = parseInt(window.getComputedStyle(mkt).order);
         currentOrder += 1;
 
-        if(currentOrder === 4){
+        if(currentOrder === 5){
           mkt.classList.add("bigger-mkt");
         }
-        if(currentOrder === 5){
+        if(currentOrder === 6){
           mkt.classList.remove("bigger-mkt");
         }
 
-        if(currentOrder > 7) {
+        if(currentOrder > 10) {
           currentOrder = 1;
         }
         mkt.style.order = currentOrder.toString();
@@ -360,7 +375,10 @@
         4: "Oat Milk Mango Smoothie",
         5: "Mango Cream Smoothie with Grapefruit",
         6: "Mango smoothie",
-        7: "Cream Cheese Foam Mango Smoothie"
+        7: "Cream Cheese Foam Mango Smoothie",
+        8: "Cream Cheese Foam Mango Smoothie",
+        9: "Cream Cheese Foam Mango Smoothie",
+        10: "Cream Cheese Foam Mango Smoothie",
       }
       let figcaption = document.querySelector(".figcaption");
       let mkt = document.querySelector(".bigger-mkt");
@@ -384,10 +402,6 @@
       var figcaption = document.querySelector(".figcaption");
       figcaption.classList.add("fade-in"); // 初始状态为淡入
     });
-
-  </script>
-
-  <script>
 
   </script>
 
