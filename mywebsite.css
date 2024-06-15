@@ -777,6 +777,7 @@ footer {
   position: relative;
   .left-button, .right-button{
     height:24px;
+    background-color: transparent;
   }
   color: #d2d2d2;
   top: 30%;
@@ -796,15 +797,13 @@ footer {
   }
   .left-button, .right-button{
     height:24px;
-    box-shadow: var(--bg) 0px 0px 2px 0px;
+    /* box-shadow: var(--bg) 0px 0px 2px 0px; */
   }
 }
 
 .material-symbols-outlined {
-  background-color:var(--bg);
+  background-color: transparent;
 }
-
-
 
 .mkt-menu .menu-btn {
   display: flex;
