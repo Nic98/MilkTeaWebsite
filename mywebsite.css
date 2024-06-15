@@ -61,6 +61,7 @@ body > div {
   font-size: xxx-large;
   color:var(--milktea);
   font-weight:bold;
+  padding-bottom: 10px;
 }
 
 /* sidbar */
@@ -989,7 +990,7 @@ a:active {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  gap: 100px;
+  gap: 150px;
   color:#1d1b31;
   padding-bottom: 20px;
   @media screen and (max-width: 850px){
