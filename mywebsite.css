@@ -1067,6 +1067,8 @@ a:active {
 .locs img {
   overflow-clip-margin: content-box;
   width: 80%;
+  height: auto;
+  object-fit: cover;
   overflow: hidden;
   border: solid 2px rgba(120,120,120);
 }
