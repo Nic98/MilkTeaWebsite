@@ -649,7 +649,7 @@ footer {
 
 
   @media screen and (max-width: 400px) {
-    width:320px;
+    width:310px;
   }
 
   @media screen and (min-width:400px) and (max-width: 550px) {
