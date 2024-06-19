@@ -648,7 +648,11 @@ footer {
   height: 550px;
 
 
-  @media screen and (max-width: 550px) {
+  @media screen and (max-width: 400px) {
+    width:270px;
+  }
+
+  @media screen and (min-width:400px) and (max-width: 550px) {
     width:320px;
   }
 
@@ -688,7 +692,12 @@ footer {
   left: -110px;
   align-items: center;
 
-  @media screen and (max-width: 550px) {
+
+  @media screen and (max-width: 400px) {
+    left:-825px;
+  }
+
+  @media screen and (min-width:400px) and (max-width: 550px) {
     left: -800px;
   }
 
@@ -737,7 +746,12 @@ footer {
   width:150%;
   opacity: 1; /* 初始状态为不可见 */
   transition: opacity 0.5s; /* 过渡效果 */
-  @media screen and (max-width:460px) {
+
+  @media screen and (max-width: 400px) {
+    font-size:15px;
+  }
+
+  @media screen and (min-width:400px) and (max-width:550px) {
     font-size:18px;
   }
   @media screen and (min-width:460px) and (max-width: 700px) {
