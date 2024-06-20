@@ -387,7 +387,7 @@ body > div {
   /* border:none; */
   border-radius: 5px;
   box-shadow: #11101d 0px 0px 1px 0px;
-  border: solid 1px rgba(120,120,120);
+  /* border: solid 1px rgba(120,120,120); */
   color: #032444;
   line-height: 25px;
   padding:.8em 1.5em;
@@ -488,6 +488,15 @@ body > div {
     height: 80%;
     font-size: small;
   }
+}
+
+.custom-position .swal2-title{
+  padding:2.8em 1em 0 !important;
+}
+
+.custom-position .swal2-html-container {
+  font-size: 1.5em;
+  padding: 0em 1.6em .3em;
 }
 
 /* intro */
@@ -644,7 +653,7 @@ footer {
   max-width: 1700px;
   margin-left: auto;
   margin-right: auto;
-  overflow: hidden;
+  /* overflow: hidden; */
   height: 550px;
 
 
@@ -1024,7 +1033,10 @@ a:active {
   background-color: var(--bg);
 }
 
-
+.store-img {
+  
+}
+ 
 .location_info .text{
   font-size: 18px;
   font-weight: 500;
@@ -1089,10 +1101,11 @@ a:active {
   justify-content: center;
   align-items: center;
   text-align: center;
-  border: solid 1px rgba(120,120,120);
+  /* border: solid 1px rgba(120,120,120); */
   box-shadow: #11101d 0px 0px 1px 0px;
   padding: 40px 0;
   gap:20px;
+  z-index: 100;
 }
 
 .locs img {
