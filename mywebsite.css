@@ -648,8 +648,6 @@ footer {
   background-color: var(--bg);
   color: #333;
   border: 20px;
-  padding: 20px 0;
-  padding-left: 20px;
   text-align: center;
   position: relative;
   bottom: 0;
@@ -657,18 +655,12 @@ footer {
   transition: all 0.5s ease;
   box-shadow: #11101d 0px 0px 2px 0px;
   border-color: #11101d;
-  width:100%;
+  width:100% !important;
   /* min-height: 100vh; */
 }
 
 .cpr {
   font-size: 15px;
-}
-
-
-.sidebar.active ~ footer {
-  width: calc(100% - 240px);
-  left:240px;
 }
 
 
