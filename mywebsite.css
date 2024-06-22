@@ -517,10 +517,11 @@ body > div {
 }
 
 .custom-position {
+  left: 5%;
   @media screen and (max-width: 600px) {
     position: relative;
-    left: 10%;
     width:80%;
+    left: 0px;
     height: 80%;
     font-size: small;
   }
