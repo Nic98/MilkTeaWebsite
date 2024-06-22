@@ -66,6 +66,19 @@ body > div {
 
 /* sidbar */
 
+.contact_list {
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
+} */
+
+.sidebar {
+  @media screen and (max-width: 600px) {
+    background-color: transparent;
+    box-shadow: none;
+  }
+}
+
 .sidebar {
   position:fixed;
   top:0;
@@ -78,11 +91,17 @@ body > div {
   z-index: 2;
   box-shadow: #11101d 0px 0px 8px 0px;
   border-color: #11101d;
+  @media screen and (max-width: 600px) {
+    background-color: transparent;
+    box-shadow: none;
+  }
 }
 
 .sidebar.active{
   width:250px;
   height: 100%;
+  background-color: var(--milktea);
+  box-shadow: #11101d 0px 0px 8px 0px;
 }
 
 .sidebar .logo_content .logo {
@@ -131,11 +150,15 @@ body > div {
   line-height: 50px;
   transform: translateX(-50%);
   transition: all 0.5s ease;
+  @media screen and (max-width: 600px){
+    color: var(--darkblue);
+  }
 }
 
 .sidebar.active #btn{
   transform: rotate(181deg);
   left: 80%;
+  color: #fff;
 }
 
 .sidebar ul {
@@ -183,6 +206,12 @@ body > div {
 }
 
 .sidebar .nav_list li a {
+  @media screen and (max-width: 600px){
+    display: none;
+  }
+}
+
+.sidebar.active .nav_list li a {
   color: #fff;
   display: flex;
   align-items: center;
@@ -193,7 +222,7 @@ body > div {
   white-space: nowrap;
 }
 
-.sidebar .nav_list li a:hover {
+.sidebar.active .nav_list li a:hover {
   color: #1b1e2e;
   background: #fff;
   padding: 5px;
@@ -228,6 +257,9 @@ body > div {
   list-style-type: none;
   transform:scale(0.9);
   transition: all 0.4s ease;
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
 }
 
 .contact_list li i {
@@ -286,6 +318,10 @@ body > div {
   z-index: 1;
   overflow-x: hidden;
   background-color: var(--bg);
+  @media screen and (max-width: 600px) {
+    left:0;
+    width:100%;
+  }
 }
 
 .sidebar.active ~ .home_content {
@@ -1033,10 +1069,6 @@ a:active {
   background-color: var(--bg);
 }
 
-.store-img {
-  
-}
- 
 .location_info .text{
   font-size: 18px;
   font-weight: 500;
@@ -1116,3 +1148,5 @@ a:active {
   overflow: hidden;
   border: solid 2px rgba(120,120,120);
 }
+
+
