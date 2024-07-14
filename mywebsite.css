@@ -101,6 +101,8 @@ body > div {
   width:250px;
   height: 100%;
   background-color: var(--milktea);
+  opacity: 0.95;
+
   box-shadow: #11101d 0px 0px 8px 0px;
 }
 
